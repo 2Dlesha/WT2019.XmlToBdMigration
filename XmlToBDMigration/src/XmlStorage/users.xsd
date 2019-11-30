@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           targetNamespace="http://www.2dlesha.org/users/"
+           xmlns:user="http://www.2dlesha.org/users/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:book="http://www.2dlesha.org/books/">
+  <xs:import schemaLocation="books.xsd" namespace="http://www.2dlesha.org/books/"/>
+  <xs:element name="id" type="xs:integer"/>
+  <xs:element name="firstname" type="xs:string"/>
+  <xs:element name="lastname" type="xs:string"/>
+  <xs:element name="dateofmembership" type="xs:string"/>
+  <xs:element name="address" type="xs:string"/>
+  <xs:element name="User" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="user:id" />
+        <xs:element ref="user:firstname" />
+        <xs:element ref="user:lastname" />
+        <xs:element ref="user:dateofmembership" />
+        <xs:element ref="user:address" />
+        <xs:element ref="user:books" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="users" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="user:User"  minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="books" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="book:bookgroup" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

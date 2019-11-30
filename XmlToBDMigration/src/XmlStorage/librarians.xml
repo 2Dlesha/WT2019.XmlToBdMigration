@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<librarians xmlns="http://www.2dlesha.org/librarians/">
+    <Librarian>
+        <id>123</id>
+        <firstname>Sten</firstname>
+        <lastname>Li</lastname>
+        <phonenumber>+3242535435</phonenumber>
+    </Librarian>
+    <Librarian>
+        <id>124</id>
+        <firstname>Mark</firstname>
+        <lastname>Zuckerberg</lastname>
+        <phonenumber>+324223535</phonenumber>
+    </Librarian>
+    <Librarian>
+        <id>1243</id>
+        <firstname>Alex</firstname>
+        <lastname>Popka</lastname>
+        <phonenumber>+228228228</phonenumber>
+    </Librarian>
+</librarians>

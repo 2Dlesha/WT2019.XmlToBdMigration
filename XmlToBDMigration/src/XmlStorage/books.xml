@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<books xmlns="http://www.2dlesha.org/books/">
+    <Comics>
+        <id>1</id>
+        <name>Deadpool</name>
+        <pagecount>50</pagecount>
+        <author>CoolBoy</author>
+        <genre>action</genre>
+        <type>color</type>
+    </Comics>
+    <ArtBook>
+        <id>2</id>
+        <name>War and peace</name>
+        <pagecount>400</pagecount>
+        <author>Lev</author>
+        <genre>roman</genre>
+    </ArtBook>
+    <ArtBook>
+        <id>24</id>
+        <name>Devils and Angels</name>
+        <pagecount>400</pagecount>
+        <author>Dan Brown</author>
+        <genre>roman</genre>
+    </ArtBook>
+    <StudyBook>
+        <id>3</id>
+        <name>Math 9</name>
+        <pagecount>100</pagecount>
+        <author>ClearMan</author>
+        <subject>Math</subject>
+    </StudyBook>
+</books>

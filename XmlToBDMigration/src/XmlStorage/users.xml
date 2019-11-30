@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<users xmlns="http://www.2dlesha.org/users/"
+        xmlns:bk="http://www.2dlesha.org/books/">
+    <User>
+        <id>123</id>
+        <firstname>Sten</firstname>
+        <lastname>Li</lastname>
+        <dateofmembership>Li</dateofmembership>
+        <address>Li</address>
+        <books></books>
+    </User>
+    <User>
+        <id>1213</id>
+        <firstname>Roman</firstname>
+        <lastname>Shuliak</lastname>
+        <dateofmembership>2000-10-10</dateofmembership>
+        <address>Minsk</address>
+        <books>
+            <bk:ArtBook>
+                <bk:id>2</bk:id>
+                <bk:name>War and peace</bk:name>
+                <bk:pagecount>400</bk:pagecount>
+                <bk:author>Lev</bk:author>
+                <bk:genre>roman</bk:genre>
+            </bk:ArtBook>
+            <bk:StudyBook>
+                <bk:id>3</bk:id>
+                <bk:name>Math 9</bk:name>
+                <bk:pagecount>100</bk:pagecount>
+                <bk:author>ClearMan</bk:author>
+                <bk:subject>Math</bk:subject>
+            </bk:StudyBook>
+        </books>
+    </User>
+</users>

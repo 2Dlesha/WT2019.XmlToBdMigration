@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.2dlesha.org/librarians/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:lib="http://www.2dlesha.org/librarians/">
+  <xs:element name="id" type="xs:integer"/>
+  <xs:element name="firstname" type="xs:string"/>
+  <xs:element name="lastname" type="xs:string"/>
+  <xs:element name="phonenumber" type="xs:string"/>
+  <xs:element name="Librarian">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lib:id" />
+        <xs:element ref="lib:firstname" />
+        <xs:element ref="lib:lastname" />
+        <xs:element ref="lib:phonenumber"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="librarians">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lib:Librarian"  minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

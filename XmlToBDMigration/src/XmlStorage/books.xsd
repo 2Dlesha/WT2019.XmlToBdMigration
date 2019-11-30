@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.2dlesha.org/books/"
+           xmlns:book="http://www.2dlesha.org/books/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="id" type="xs:integer"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="pagecount" type="xs:integer"/>
+  <xs:element name="author" type="xs:string"/>
+  <xs:element name="genre" type="xs:string"/>
+  <xs:element name="type" type="xs:string"/>
+  <xs:element name="subject" type="xs:string"/>
+  <xs:element name="Comics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="book:id"/>
+        <xs:element ref="book:name"/>
+        <xs:element ref="book:pagecount"/>
+        <xs:element ref="book:author"/>
+        <xs:element ref="book:genre"/>
+        <xs:element ref="book:type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArtBook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="book:id"/>
+        <xs:element ref="book:name"/>
+        <xs:element ref="book:pagecount"/>
+        <xs:element ref="book:author" />
+        <xs:element ref="book:genre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudyBook" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="book:id" />
+        <xs:element ref="book:name" />
+        <xs:element ref="book:pagecount" />
+        <xs:element ref="book:author" />
+        <xs:element ref="book:subject"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="bookgroup" >
+      <xs:choice>
+        <xs:element ref="book:Comics" />
+        <xs:element ref="book:ArtBook" />
+        <xs:element ref="book:StudyBook" />
+      </xs:choice>
+  </xs:group>
+  <xs:element name="books" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="book:bookgroup" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
